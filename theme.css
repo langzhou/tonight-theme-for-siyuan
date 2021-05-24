@@ -625,9 +625,10 @@ strong[style]{
     border-left: 2px solid var(--b3-theme-primary);
     background-color: var(--b3-theme-background);
     color: var(--b3-theme-on-background);
-    margin:1em 2em 1em 2em ; 
-    padding-left: 1em ;
+    margin:1em 2em 1em 2em ;
     padding: 0 4px;
+    padding-left: 1em ;
+
 }
 
 /* 调整引述在超级块中的样式 */
