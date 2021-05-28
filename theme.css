@@ -319,6 +319,13 @@ span.counter:not(.popover__block){
 .layout-tab-bar .item__text{
     padding: 0 2px;
 }
+/* 默认隐藏页签关闭按钮，悬浮时展现 */
+.layout-tab-bar .item__close{
+    visibility: hidden;
+}
+.layout-tab-bar .item:hover .item__close{
+    visibility: visible;
+}
 
 /***** 面包屑 *****/
 .protyle-breadcrumb{
@@ -559,7 +566,10 @@ strong[style]{
     font-size: 85%;
 }
 
-
+/* 数学公式 */
+.b3-typography [data-subtype="math"], .protyle-wysiwyg [data-subtype="math"]{
+    font-size: 100%;
+}
 
 /* 块折叠状态 */
 .protyle-wysiwyg [data-node-id][fold="1"]{
@@ -825,7 +835,6 @@ strong[style]{
 .b3-dialog--open .b3-dialog__container{
     transform:translate(-50%,-50%); animation: dialogOpen 0.3s ease-in-out forwards;
 }
-
 @keyframes dialogOpen {
     0% {
         -webkit-transform: matrix3d(.7, 0, 0, 0, 0, .7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
