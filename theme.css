@@ -44,9 +44,9 @@
 
     /* 卡片背景 */
     --b3-card-error-color: #6D2833;
-    --b3-card-error-background: #BCA4A3;
+    --b3-card-error-background: #d8b0ae;
     --b3-card-warning-color: #6D360B;
-    --b3-card-warning-background: #C5AC9A;
+    --b3-card-warning-background: #dac28b;
     --b3-card-info-color: #084970;
     --b3-card-info-background: #85BBDC;
     --b3-card-success-color: #073E26;
@@ -437,6 +437,13 @@ span.counter:not(.popover__block){
     background-color:var(--b3-theme-primary);
     color: var(--b3-theme-on-primary);
 }
+/* 鼠标悬浮块图标时块字体高亮色 */
+.protyle-wysiwyg--hl {
+    color: var(--b3-theme-on-background) !important;
+}
+[style] .protyle-wysiwyg--hl {
+    color: inherit !important;
+}
 
 /* Switch 开关 */
 .b3-switch:after{
@@ -466,8 +473,21 @@ span.counter:not(.popover__block){
 
 
 /***** 块图标 ********/
+/* 调整块图标垂直位置偏移 */
 .protyle-gutters{
-    padding: 9px 0; /* 调整调整 padding 之后带来的块图标垂直位置偏移 */
+    padding: 0.625em 0; 
+}
+.protyle-gutters button[data-subtype="h1"] {
+    margin-top: 0.875em;
+}
+.protyle-gutters button[data-subtype="h2"] {
+    margin-top: 0.625em;
+}
+.protyle-gutters button[data-subtype="h3"] {
+    margin-top: 0.375em;
+}
+.protyle-gutters button[data-subtype="h4"] {
+    margin-top: 0.25em;
 }
 
 /* 减淡块图标颜色 */
@@ -504,6 +524,14 @@ span.counter:not(.popover__block){
 
 
 /***** 大纲圆点 *******/
+/* 优化：v1.2 beta3+ 版本下段落距离圆点过远 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action{
+    width: 16px;
+}
+.protyle-wysiwyg [data-node-id].li>[data-node-id]{
+    margin-left: 16px;
+}
+
 /* 设置圆点基础样式 */
 .protyle-wysiwyg [data-node-id].li>.protyle-action svg{
     width:12px;
@@ -620,7 +648,11 @@ strong[style]{
 .protyle-wysiwyg [data-node-id] span[data-type="block-ref"]:hover{
     background-color: var(--b3-theme-primary-lighter);
 }
-
+/* 颜色卡片内的块引用字体颜色与卡片保持一致 */
+.protyle-wysiwyg [style] span[data-type="block-ref"]{
+    color: inherit;
+    border-color: inherit;
+}
 
 /* 超级链接 */
 .b3-typography a,.protyle-wysiwyg [data-node-id] span[data-type="a"]{
@@ -820,6 +852,11 @@ span[data-type="tag"][data-content="完成"],span[data-type="tag"][data-content=
     padding: var(--allen-block-padding);
 }
 /**** 实验功能结束 ***/
+
+/* 调整超级块颜色卡片内内标题颜色 */
+[style].sb  [data-type="NodeHeading"]{
+    color: inherit ;
+}
 
 /* 段落 p */
 .b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id]{
