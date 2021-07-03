@@ -166,7 +166,7 @@
     --h6-color: inherit;
 
     /**** 设置 ****/
-    --dock-border:                  1px solid var(--b3-border-color); /* 顶栏、dock、页签栏边框 */
+    --dock-border:                  0px solid var(--b3-border-color); /* 顶栏、dock、页签栏边框 */
     --column-border:                transparent; /* 分栏分割线 */
     --line-height:                  1.75em; /* 行高 */
     --margin-top-bottom:            2px;    /* 上下 margin */
